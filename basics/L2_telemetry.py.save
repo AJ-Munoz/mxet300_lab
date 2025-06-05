@@ -1,0 +1,14 @@
+import time as time
+import L1_ina as ina
+
+text = open("a_file.txt",)
+
+try:
+	while True:
+    		volts = str(ina.readVolts())
+    		print("Volts: " + volts)
+		text.write(volts)
+    		time.sleep(1)
+
+except:
+	print(" Terminated by Keyboard")
